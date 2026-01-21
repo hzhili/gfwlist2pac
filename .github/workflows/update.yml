@@ -41,7 +41,7 @@ jobs:
         run: |
           set -x
 
-          echo "当前目录:"$(pwd)
+          #echo "当前目录:"$(pwd)
           pac_proxy=""
           if [ "${{ secrets.SOCKS_PROXY }}" != '' ]; then 
             pac_proxy="SOCKS5 ${{ secrets.SOCKS_PROXY }};"
@@ -50,7 +50,7 @@ jobs:
             pac_proxy=${pac_proxy}"HTTP ${{ secrets.HTTP_PROXY}};"
           fi
           pac_proxy=${pac_proxy}"DIRECT"
-          genpac --format=pac --pac-proxy="${pac_proxy}" --gfwlist-url - --gfwlist-local gfwlist/gfwlist.txt -o gfwlist.pac
+          genpac --format=pac --pac-proxy="${pac_proxy}" --gfwlist-url - --gfwlist-local $(pwd)/gfwlist/gfwlist.txt -o gfwlist.pac
           sed '1,7d' -i gfwlist.pac
 
           git add gfwlist.pac
