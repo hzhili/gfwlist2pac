@@ -42,10 +42,10 @@ jobs:
           set -x
 
           pac_proxy=""
-          if [[ -n "${{ secrets.SOCKS_PROXY }}"]]; then 
-            pac_proxy=${pac_proxy}"SOCKS5 ${{ secrets.SOCKS_PROXY }};"
+          if [ "${{ secrets.SOCKS_PROXY }}" != '' ]; then 
+            pac_proxy="SOCKS5 ${{ secrets.SOCKS_PROXY }};"
           fi
-          if [[ -n "${{ secrets.HTTP_PROXY}}"]];then
+          if [ "${{ secrets.HTTP_PROXY}}" != '' ];then
             pac_proxy=${pac_proxy}"HTTP ${{ secrets.HTTP_PROXY}};"
           fi
           pac_proxy=${pac_proxy}"DIRECT"
