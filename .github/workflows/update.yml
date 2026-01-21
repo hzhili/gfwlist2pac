@@ -41,6 +41,7 @@ jobs:
         run: |
           set -x
 
+          echo "当前目录:"$(pwd)
           pac_proxy=""
           if [ "${{ secrets.SOCKS_PROXY }}" != '' ]; then 
             pac_proxy="SOCKS5 ${{ secrets.SOCKS_PROXY }};"
