@@ -50,7 +50,7 @@ jobs:
             pac_proxy=${pac_proxy}"HTTP ${{ secrets.HTTP_PROXY}};"
           fi
           pac_proxy=${pac_proxy}"DIRECT"
-          genpac --format=pac --pac-proxy="${pac_proxy}" --gfwlist-url - --gfwlist-local $(pwd)/gfwlist/gfwlist.txt -o gfwlist.pac
+          genpac --format=pac --pac-proxy="${pac_proxy}"  -o gfwlist.pac
           sed '1,7d' -i gfwlist.pac
 
           git add gfwlist.pac
