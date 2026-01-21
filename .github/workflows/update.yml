@@ -41,7 +41,15 @@ jobs:
         run: |
           set -x
 
-          genpac --format=pac --pac-proxy="SOCKS5 ${{ secrets.SOCKS_PROXY }}; HTTP ${{ secrets.HTTP_PROXY}}; DIRECT" --gfwlist-url - --gfwlist-local gfwlist/gfwlist.txt -o gfwlist.pac
+          export pac_proxy=""
+          if [[ -n "${{ secrets.SOCKS_PROXY }}"]]; then 
+            pac_proxy=pac_proxy+"SOCKS5 ${{ secrets.SOCKS_PROXY }};"
+          fi;
+          if [[ -n "${{ secrets.HTTP_PROXY}}"]];then
+            pac_proxy=pac_proxy+"HTTP ${{ secrets.HTTP_PROXY}};"
+          fi;
+          pac_proxy=pac_proxy+"DIRECT"
+          genpac --format=pac --pac-proxy=${pac_proxy} --gfwlist-url - --gfwlist-local gfwlist/gfwlist.txt -o gfwlist.pac
           sed '1,7d' -i gfwlist.pac
 
           git add gfwlist.pac
