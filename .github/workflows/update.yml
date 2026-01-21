@@ -44,10 +44,10 @@ jobs:
           pac_proxy=""
           if [[ -n "${{ secrets.SOCKS_PROXY }}"]]; then 
             pac_proxy=${pac_proxy}"SOCKS5 ${{ secrets.SOCKS_PROXY }};"
-          fi;
+          fi
           if [[ -n "${{ secrets.HTTP_PROXY}}"]];then
             pac_proxy=${pac_proxy}"HTTP ${{ secrets.HTTP_PROXY}};"
-          fi;
+          fi
           pac_proxy=${pac_proxy}"DIRECT"
           genpac --format=pac --pac-proxy="${pac_proxy}" --gfwlist-url - --gfwlist-local gfwlist/gfwlist.txt -o gfwlist.pac
           sed '1,7d' -i gfwlist.pac
