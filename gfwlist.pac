@@ -552,6 +552,7 @@ var rules = [
             "babylonbee.com",
             "babynet.com.hk",
             "backchina.com",
+            "backend-v2.crixet.com",
             "backpackers.com.tw",
             "backtotiananmen.com",
             "bad.news",
