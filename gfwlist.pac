@@ -4817,6 +4817,7 @@ var rules = [
             "tafm.org",
             "tagwalk.com",
             "tahr.org.tw",
+            "tails.net",
             "taipei.gov.tw",
             "taipeisociety.org",
             "taipeitimes.com",
