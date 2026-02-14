@@ -3817,6 +3817,7 @@ var rules = [
             "wallmama.com",
             "wallpapercasa.com",
             "wallsttv.com",
+            "wallzhihu.com",
             "waltermartin.com",
             "waltermartin.org",
             "wanderinghorse.net",
