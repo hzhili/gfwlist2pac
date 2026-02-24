@@ -1239,6 +1239,7 @@ var rules = [
             "freebeacon.com",
             "freebrowser.org",
             "freechinaweibo.com",
+            "freedom.gov",
             "freedomhouse.org",
             "freedominfonetweb.wordpress.com",
             "freedomsherald.org",
