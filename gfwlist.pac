@@ -981,6 +981,7 @@ var rules = [
             "dougscripts.com",
             "doujincafe.com",
             "download.aircrack-ng.org",
+            "download.dappcdn.com",
             "dpool.top",
             "dpp.org.tw",
             "dpr.info",
