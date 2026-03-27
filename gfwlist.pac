@@ -2986,7 +2986,6 @@ var rules = [
             "rutracker.org",
             "rxhj.net",
             "s-cute.com",
-            "s.rmimg.com",
             "s.yimg.com",
             "s3-ap-*.amazonaws.com",
             "s3-ap-northeast-1.amazonaws.com",
