@@ -3021,6 +3021,7 @@ var rules = [
             "savetibetstore.org",
             "saveuighur.org",
             "sbme.me",
+            "sbti.unun.dev",
             "scache.vzw.com",
             "scache1.vzw.com",
             "scache2.vzw.com",
