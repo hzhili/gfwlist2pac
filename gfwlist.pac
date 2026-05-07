@@ -3665,6 +3665,7 @@ var rules = [
             "ultrasurf.us",
             "ultravpn.com",
             "ultravpn.fr",
+            "umap.openstreetmap.fr",
             "unblock-us.com",
             "unblock.cn.com",
             "unblockdmm.com",
