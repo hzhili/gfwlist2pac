@@ -999,6 +999,7 @@ var rules = [
             "douchi.space",
             "dougscripts.com",
             "doujincafe.com",
+            "dowjones.io",
             "download.dappcdn.com",
             "dpool.top",
             "dpp.org.tw",
