@@ -3670,6 +3670,7 @@ var rules = [
             "truebuddha-md.org",
             "trustwallet.com",
             "truthsocial.com",
+            "tryai.dev",
             "tryheart.jp",
             "tsdr.uspto.gov",
             "tt1069.com",
