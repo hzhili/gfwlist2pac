@@ -2704,6 +2704,7 @@ var rules = [
             "okpool.me",
             "okx.com",
             "old.honeynet.org",
+            "oldmapsonline.org",
             "olehdtv.com",
             "olelive.com",
             "olevod.com",
