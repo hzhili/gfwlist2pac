@@ -3240,6 +3240,7 @@ var rules = [
             "simplex.chat",
             "sina.com.hk",
             "sinchew.com.my",
+            "sing-box.sagernet.org",
             "singaporepools.com.sg",
             "singlelogin.se",
             "singtao.com",
