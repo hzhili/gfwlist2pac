@@ -446,6 +446,7 @@ var rules = [
             "bignews.org",
             "bigone.com",
             "bild.de",
+            "bilibili.tv",
             "bilinovel.com",
             "biliworld.com",
             "binance.com",
