@@ -32,10 +32,26 @@ jobs:
         with:
           path: .
 
-      - run: |
+      # Pin the interpreter: genpac declares support for 3.8-3.12, and its
+      # pinned PyYAML 6.0.1 has no wheels for newer versions (3.13+), which
+      # makes pip fall back to a fragile source build.
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      # Install into an isolated venv instead of the system site-packages.
+      # `sudo pip3 install .` used to try replacing the apt-managed PyYAML
+      # (6.0.3) with 6.0.1 and died with:
+      #   error: uninstall-no-record-file
+      #   Cannot uninstall PyYAML 6.0.3 ... no RECORD file was found for PyYAML
+      - name: Install genpac
+        run: |
           cd genpac
           # sed 's/from collections import Callable/from collections.abc import Callable/g' -i $(grep 'from collections import Callable' . -rIl)
-          sudo pip3 install .
+          python3 -m venv "${RUNNER_TEMP}/genpac-venv"
+          "${RUNNER_TEMP}/genpac-venv/bin/python" -m pip install --upgrade pip setuptools wheel
+          "${RUNNER_TEMP}/genpac-venv/bin/python" -m pip install --no-cache-dir .
+          echo "${RUNNER_TEMP}/genpac-venv/bin" >> "${GITHUB_PATH}"
 
       - name: Update
         run: |
